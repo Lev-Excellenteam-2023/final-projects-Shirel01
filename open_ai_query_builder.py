@@ -4,7 +4,7 @@ def build_prompt(powerpoint_content_list: list[list[str]]) -> str:
     for slide_list in powerpoint_content_list:
         all_text.extend(slide_list)
 
-    prompt = "Explain these slides of PowerPoint: "
+    prompt = "The text below is extracted from powerpoint presentation, give me short explanation about it: "
     prompt += ' '.join(all_text)
 
     return prompt
