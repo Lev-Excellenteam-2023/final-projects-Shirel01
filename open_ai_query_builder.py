@@ -1,6 +1,4 @@
-
-
-def build_prompt(powerpoint_content_list):
+def build_prompt(powerpoint_content_list: list[list[str]]) -> str:
     all_text = []
 
     for slide_list in powerpoint_content_list:
@@ -11,9 +9,8 @@ def build_prompt(powerpoint_content_list):
 
     return prompt
 
-def build_prompt_for_single_slide(slide_content_list: list[str])->str:
 
+def build_prompt_for_single_slide(slide_content_list: list[str]) -> str:
     prompt = "Explain this slide of PowerPoint:\n"
     prompt += ''.join(slide_content_list)
     return prompt
-
