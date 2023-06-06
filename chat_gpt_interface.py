@@ -1,11 +1,11 @@
 import openai
 
-import ai_interface
-
-
 def send_query(questions: str) -> list:
     # Set up your OpenAI API credentials
-    openai.api_key = ai_interface.api_key
+
+    file = open ('api_key.txt', 'r')
+    my_api_key = file.read()
+    openai.api_key = my_api_key
 
     # Define the parameters for the completion
     model = 'gpt-3.5-turbo'
