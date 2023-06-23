@@ -23,6 +23,8 @@ def main():
     response = asyncio.run(process_slide(powerpoint_content))
     json_utils.save_to_json(response, "res.json")
     return response
+
+
 if __name__ == "__main__":
     main()
 
